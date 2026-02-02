@@ -1,7 +1,7 @@
 class ScoreUtils {
 
     public static boolean checkScore(double score) {
-       return score >= 5.0;
+        return score >= 5;
     }
 
     public static double avg(double score1, double score2, double score3) {
@@ -16,14 +16,11 @@ public class Bai03 {
         double s3 = 4.5;
 
         double avg = ScoreUtils.avg(s1, s2, s3);
+        System.out.println("Điểm trung bình cả lớp: " +avg);
 
-        boolean pass = ScoreUtils.checkScore(avg);
-        System.out.println("Điểm trung bình: " +avg);
+        System.out.println(+s1 + ": " +(ScoreUtils.checkScore(s1) ? "Đạt":  "Trượt"));
+        System.out.println(+s2+ ": " + (ScoreUtils.checkScore(s2) ? "Đạt":  "Trượt"));
+        System.out.println(+s3 + ": " +(ScoreUtils.checkScore(s3) ? "Đạt":  "Trượt"));
 
-        if (pass) {
-            System.out.println("Đạt");
-        }else {
-            System.out.println("Không đạt");
-        }
     }
 }
